@@ -1,0 +1,75 @@
+conversao = 3.6
+
+s = 0
+h = 0
+
+
+print("Bem vindo ao Software para calculo de velocidade!! ")
+print()
+
+decisao = int(input("Se deseja trabalhar em km/h digite '1', ou se deseja trabalhar em M/s digite 2, ou se deseja trabalhar com Km/h e M/s juntos digite 3: "))
+print()
+
+
+if(decisao==1):
+    acao0 = float(input("Digite a velocidade inicial em Km/h: "))
+    acao1 = float(input("Digite a velocidade total em Km/h: "))
+    acao2 = float(input("Digite o tempo inicial em horas: "))
+    acao3 = float(input("Digite o tempo total em horas: "))
+
+    resultado = (acao1 - acao0)/(acao3-acao2)
+    print("A velocidade media é: ", resultado, " Km/h")
+
+elif(decisao==2):
+    acao0 = float(input("Digite a velocidade inicial em M/s: "))
+    acao1 = float(input("Digite a velocidade total em M/s: "))
+    acao2 = float(input("Digite o tempo inicial em segundos: "))
+    acao3 = float(input("Digite o tempo total em segundos: "))
+
+    resultado = (acao1 - acao0)/(acao3-acao2)
+    print("A velocidade media é: ", resultado, " M/s")
+elif(decisao==3):
+
+    contador = str(input("Quer o resultado em segundos ou horas? digite h para hora ou s para segundos: "))
+
+    acao0 = float(input("Digite a velocidade inicial em Km/h ou M/s: "))
+    numero = int(input("Digite 1 se foi digitado em Km/h ou 2 se foi digitado em M/s: "))
+    if(numero==1 and contador == s):
+        convertido = acao0/conversao
+        acao0 = convertido
+    else:
+        if(numero==2 and contador == h):
+             convertido = acao0*conversao
+             acao0 = convertido
+    acao1 = float(input("Digite a velocidade total em Km/h ou em M/s: "))
+    numero = int(input("Digite 1 se foi digitado em Km/h ou 2 se foi digitado em M/s: "))
+    if(numero==1 and contador == s):
+        convertido = acao1/conversao
+        acao1 = convertido
+    else:
+        if(numero==2 and contador == h):
+             convertido = acao1*conversao
+             acao1 = convertido
+    acao2 = float(input("Digite o tempo inicial em horas ou em segundos: "))
+    numero = int(input("Digite 1 se foi digitado em hora ou 2 se foi digitado em segundos: "))
+    if(numero==1 and contador == s):
+        convertido = acao2/conversao
+        acao2 = convertido
+    else:
+        if(numero==2 and contador == h):
+             convertido = acao2*conversao
+             acao2 = convertido
+    acao3 = float(input("Digite o tempo total em horas ou em segundos: "))
+    numero = int(input("Digite 1 se foi digitado em hora ou 2 se foi digitado em segundos: "))
+    if(numero==1 and contador == s):
+        convertido = acao3/conversao
+        acao3 = convertido
+    else:
+        if(numero==2 and contador == h):
+             convertido = acao3*conversao
+             acao3 = convertido
+
+    resultado = (acao1 - acao0)/(acao3-acao2)
+    print("A velocidade media é: ", resultado, " M/s")
+elif(decisao != 1 or 2 or 3):
+    print("Voce digitou um numero incorreto!")
