@@ -1,0 +1,11 @@
+# -*- coding:UTF-8 -*-
+
+from tkinter import *
+
+qualquer = Tk() #Cria a caixa do programa em branco
+qualquer.resizable(width=FALSE, height=FALSE) #Configura a tela para não poder ser aumentada
+caixa= Frame(qualquer) #Cria uma janela dentro da caixa em branco
+caixa.pack(pady=50,padx=50) #Os pads distancia o frame do resto da caixa
+text=Label(caixa, text="Ola Mundo!!",font=("Ariel",10,"bold"), fg="red") #Cria um texto dentro do frame caixa,O fg muda a cor do texto
+text.pack() #coloca geometria dentro do frame para aparecer o texto
+qualquer.mainloop() #Faz o programa rodar até ser fechado
